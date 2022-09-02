@@ -1,0 +1,296 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+$greenBtn: #05C489
+
+$violet: #2F2F6C
+
+$font-suisse-bold: SuisseIntl-Bold, sans-serif //
+$font-suisse-reg: SuisseIntl-Regular, sans-serif
+$font-suisse-med: SuisseIntl-Medium, sans-serif //
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //
+$font-wulkan: WulkanDisplay, sans-serif
+$yaro-font: Yaro, sans-serif //
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  color: $grey
+  height: 100%
+  background: $violet
+
+  img
+    max-width: 100%
+    height: auto
+
+.container
+  padding-left: 240px
+
+.all__link
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 52
+
+.help
+  //background: $violet url('../img/bg-desc.svg') no-repeat 50% 0/cover
+  height: 100%
+  display: flex
+  //align-items: center
+  //justify-content: center
+  overflow: hidden
+  flex-direction: column
+  position: relative
+
+  &__logo
+    background: url('../img/logo.svg') no-repeat 50% 0/ contain
+    width: 275px
+    height: 50px
+    position: absolute
+    top: 40px
+    left: 60px
+  &__wheel-1,
+  &__wheel-2
+    position: absolute
+    background: url('../img/wheel-desc.png') no-repeat 50% 0/ contain
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url('../img/wheel-mob.png') no-repeat 50% 0/ contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url('../img/wheel-mob.png') no-repeat 50% 0/ contain
+    width: 130px
+    height: 130px
+  &__wheel-1
+    top: 370px
+    left: 100px
+  &__wheel-2
+    top: 250px
+    left: 200px
+  &__barrel-1
+    position: absolute
+    bottom: 121px
+    left: -80px
+    width: 177px
+    height: 196px
+    z-index: 2
+    background: url('../img/barrel-1-desc.png') no-repeat 50% 0/ contain
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url('../img/barrel-1-mob.png') no-repeat 50% 0/ contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url('../img/barrel-1-mob.png') no-repeat 50% 0/ contain
+  &__barrel-2
+    position: absolute
+    bottom: 180px
+    right: -13px
+    width: 211px
+    height: 234px
+    z-index: 2
+    background: url('../img/barrel-2-desc.png') no-repeat 50% 0/ contain
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url('../img/barrel-2-mob.png') no-repeat 50% 0/ contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url('../img/barrel-2-mob.png') no-repeat 50% 0/ contain
+
+  &__garage
+    flex: 1 1 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
+      background: $violet url('../img/bg-desc.svg') no-repeat 50% 0/cover
+    @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      background: $violet
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: $violet
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: $violet url("../img/bg-desc.svg") no-repeat 50% 0/cover
+    @media (min-width: 1950px) and (orientation: landscape)
+      background: $violet url("../img/bg-desc.svg") no-repeat 50% 0/contain
+    .wrapper
+      position: relative
+      z-index: 4
+      background: $violet url('../img/garage-desc.jpg') no-repeat 50% 0/cover
+      height: 100%
+      width: 1030px
+      display: flex
+      justify-content: center
+      align-items: flex-end
+
+      &::before,
+      &::after
+        position: absolute
+        height: 100%
+        width: 30px
+        background: rgba(2, 2, 55, 0.4)
+      &::after
+        content: ''
+        left: -30px
+      &::before
+        content: ''
+        right: -30px
+    &-progress
+      position: absolute
+      top: 75px
+      left: 50%
+      transform: translateX(-50%) skewX(-30deg)
+      height: 30px
+      width: 565px
+      background: rgba(255, 38, 126, 0.4)
+      border: 1px solid #FF267E
+      box-shadow: 0px 0px 14px #FF267E
+      border-radius: 6px
+      //overflow: hidden
+      .myProgress
+        border-radius: 6px
+        background: #FFD300
+        height: 100%
+        width: 44%
+        position: relative
+        .percetn
+          position: absolute
+          right: -10px
+          top: 50%
+          transform: translateY(-50%) skewX(30deg)
+          font-family: $yaro-font
+          font-weight: 400
+          color: #EDEDED
+          font-size: 24px
+          line-height: 24px
+          -webkit-text-stroke-width: 2px
+          -webkit-text-stroke-color: $blue
+          padding: 12px 11px 7px
+          background: #FFD300
+          border: 3px solid $blue
+          border-radius: 13px
+        .arrow-right
+          position: absolute
+          top: 50%
+          transform: translateY(-50%) skewX(30deg) scale(-1)
+          right: -59px
+          span
+            display: block
+            width: 13px
+            height: 13px
+            border-bottom: 4px solid $magenta
+            border-left: 4px solid $magenta
+            margin: 0
+            animation: arrow-left 1.5s infinite
+            float: left
+            &:nth-child(2)
+              animation-delay: -0.1s
+            &:nth-child(3)
+              animation-delay: -0.2s
+
+    &-message
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 470px
+      height: 350px
+      margin-bottom: 140px
+      background:  url('../img/back-desc.png') no-repeat 50% 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background:  url("../img/back-mob.png") no-repeat 50% 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background:  url("../img/back-mob.png") no-repeat 50% 0/contain
+
+    &-img
+      width: 280px
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      top: -105px
+    &-text
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 25px
+      &-title
+        font-family: $font-suisse-bold
+        color: $magenta
+        text-align: center
+        font-size: 27px
+        line-height: 33px
+        letter-spacing: 0.12em
+        text-transform: uppercase
+        margin: 0 0 10px 0
+      &-win
+        font-family: $font-suisse-med
+        color: $blue
+        font-size: 19px
+        line-height: 32px
+        letter-spacing: 0.22em
+        text-transform: uppercase
+    &-btn-wrap
+      position: absolute
+      bottom: 5px
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 4
+      .btn-back
+        position: absolute
+        z-index: 0
+        top: 0
+        left: 0
+        width: 258px
+        height: 78px
+        background: url("../img/back-btn.svg") no-repeat
+        background-size: contain
+    &-btn
+      display: inline-block
+      font-family: $font-suisse-semb
+      font-size: 17px
+      line-height: 22px
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      color: $blue
+      background: $green
+      padding: 23px 41px 21px
+      border-radius: 4px
+      position: relative
+      z-index: 2
+      min-width: 251px
+      transition: background .3s ease
+      &:hover
+        background: $green-hover
+
+  &__bottom
+    width: 100%
+    bottom: 0
+    left: 0
+    height: 240px
+    background: #606068
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      background:  url('../img/track.png') no-repeat 50% 0/contain
+      width: 696px
+      height: 165px
+      transform: rotate(-4deg)
+      bottom: 1px
+      right: -231px
+
+
+@keyframes arrow-left
+  0%
+    opacity: 0
+    transform: rotate(45deg) translate(-0px,-0px)
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+    transform: rotate(45deg) translate(0px,0px)
+
+
+
+
+
+
+
