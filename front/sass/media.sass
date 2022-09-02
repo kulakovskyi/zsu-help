@@ -373,4 +373,87 @@
       bottom: -59px
 
 
+//LANDSCAPE
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+  .help
+    &__garage
+      flex: 0 1 auto
+      &-message
+        margin-bottom: 48px
+        margin-top: 18px
+        transform-origin: bottom center
+        transform: scale(0.7)
+    &__bottom
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 4
+      height: 60px
+      overflow: hidden
+    &__wheel-1,
+    &__wheel-2
+      bottom: 2px
+      transform: scale(0.7)
+    &__wheel-2
+      left: 12px
+    &__barrel-2
+      bottom: 16px
+      transform: scale(0.7)
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 440px)
+  .help
+    &__garage
+      &-message
+        transform-origin: center
+        transform: scale(0.6)
+        margin-top: 50px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 440px)
+  .help
+    &__garage
+      &-progress
+        transform: translateX(-50%) skewX(-30deg) scale(0.6)
+      &-message
+        transform-origin: center
+        transform: scale(0.55)
+        margin-top: 22px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 377px)
+  .help
+    &__garage
+      &-message
+        transform-origin: center
+        transform: scale(0.5)
+        margin-top: 13px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 350px)
+  .help
+    &__bottom
+      height: 36px
+    &__wheel-1,
+    &__wheel-2
+      bottom: -13px
+    &__barrel-2
+      bottom: -1px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 324px)
+  .help
+    &__garage
+      &-progress
+        transform: translateX(-50%) skewX(-30deg) scale(0.5)
+        top: 14px
+      &-message
+        transform-origin: center
+        transform: scale(0.45)
+        margin-top: -14px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 290px)
+  .help
+    &__garage
+      &-message
+        transform-origin: center
+        transform: scale(0.4)
+        margin-top: -27px
+
 
