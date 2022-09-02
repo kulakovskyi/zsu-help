@@ -146,8 +146,9 @@ body
       width: 565px
       background: rgba(255, 38, 126, 0.4)
       border: 1px solid #FF267E
-      box-shadow: 0px 0px 14px #FF267E
+      //box-shadow: 0px 0px 14px #FF267E
       border-radius: 6px
+      animation: shadow 1.5s infinite
       //overflow: hidden
       .myProgress
         border-radius: 6px
@@ -293,6 +294,14 @@ body
   100%
     opacity: 0
     transform: rotate(45deg) translate(0px,0px)
+
+@keyframes shadow
+  0%
+    box-shadow: 0px 0px 14px #FF267E
+  50%
+    box-shadow: 0px 0px 19px #FF267E
+  100%
+    box-shadow: 0px 0px 14px #FF267E
 
 
 
